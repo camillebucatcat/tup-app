@@ -1,0 +1,73 @@
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <img src="./assets/images/site-logo.png" alt="" class="logo">
+  </div>
+  <form action="">
+    <div class="form-title">Current Employment Information</div>
+
+    <ion-item class="form-group">
+      <ion-label position="stacked">Company Name</ion-label>
+      <ion-input placeholder="Company Name"></ion-input>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Date of Employment</ion-label>
+      <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Job Position</ion-label>
+      <ion-input placeholder="Job Position"></ion-input>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Job Status</ion-label>
+      <ion-select placeholder="Select Job Status">
+        <ion-select-option value="p">Permanent</ion-select-option>
+        <ion-select-option value="c">Contractual/Project Based</ion-select-option>
+        <ion-select-option value="t">Temporary</ion-select-option>
+        <ion-select-option value="s">Self-employed</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Type of Organization</ion-label>
+      <ion-select placeholder="Select Type of Organization">
+        <ion-select-option value="p">Private</ion-select-option>
+        <ion-select-option value="g">Government</ion-select-option>
+        <ion-select-option value="n">Non-Government Organization</ion-select-option>
+        <ion-select-option value="s">Self-employed</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Is your current work aligned w/ your academic field of specification?</ion-label>
+      <ion-select placeholder="Select Job Status">
+        <ion-select-option value="sd">Strogly Disagree</ion-select-option>
+        <ion-select-option value="d">Disagree</ion-select-option>
+        <ion-select-option value="a">Agree</ion-select-option>
+        <ion-select-option value="ma">Moderately Agree</ion-select-option>
+        <ion-select-option value="sa">Stronly Agree</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br><br>
+    <div class="section-title">Immediate Supervisor</div>
+
+    <ion-item class="form-group">
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item class="form-group">
+      <ion-label position="stacked">Contact Number</ion-label>
+      <ion-input placeholder="Contact Number"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" fill="outline" class="my-3">Skip</ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="5">
+      <ion-button expand="block" color="dark" fill="clear">Back</ion-button>
+    </ion-col>
+    <ion-col size="7">
+      <ion-button expand="block">Next</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
