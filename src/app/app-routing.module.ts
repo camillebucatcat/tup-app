@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'upload-document',
     loadChildren: () => import('./pages/registration/upload-document/upload-document.module').then( m => m.UploadDocumentPageModule)
+  },
+  {
+    path: 'terms-condition',
+    loadChildren: () => import('./pages/registration/terms-condition/terms-condition.module').then( m => m.TermsConditionPageModule)
   }
 ];
 

@@ -34,11 +34,25 @@
   color: var(--ion-color-medium);
 }
 
+ion-header {
+  box-shadow: 0px 2px 4px rgba(34, 36, 43, 0.1);
+
+  ion-toolbar {
+    --min-height: 65px;
+    --border-width: 0!important;
+
+    .logo {
+      width: 13rem;
+    }
+  }
+}
+
 ion-content {
   --background: var(--ion-color-light);
 }
 
 ion-footer {
+  box-shadow: 0 0 4px 2px rgba(34, 36, 43, 0.1);
   background: var(--ion-color-light);
 }
 
@@ -50,8 +64,9 @@ ion-footer {
 }
 
 .form-title {
-  font-size: 15px;
-  margin-bottom: 1rem;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-title {
@@ -59,4 +74,5 @@ ion-footer {
   margin-bottom: .5rem;
   border-bottom: 1px solid rgba(var(--ion-color-medium-rgb), 0.2);
   padding-bottom: 5px;
+  opacity: .8;
 }
