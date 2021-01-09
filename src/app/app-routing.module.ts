@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'terms-condition',
     loadChildren: () => import('./pages/registration/terms-condition/terms-condition.module').then( m => m.TermsConditionPageModule)
+  },
+  {
+    path: 'review-information',
+    loadChildren: () => import('./pages/registration/review-information/review-information.module').then( m => m.ReviewInformationPageModule)
   }
 ];
 
