@@ -46,6 +46,26 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'announcement',
+    loadChildren: () => import('./pages/announcement/announcement.module').then( m => m.AnnouncementPageModule)
+  },
+  {
+    path: 'poll',
+    loadChildren: () => import('./pages/poll/poll.module').then( m => m.PollPageModule)
+  },
+  {
+    path: 'event',
+    loadChildren: () => import('./pages/event/event.module').then( m => m.EventPageModule)
+  },
+  {
+    path: 'job',
+    loadChildren: () => import('./pages/job/job.module').then( m => m.JobPageModule)
   }
 ];
 

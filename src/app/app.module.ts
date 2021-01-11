@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     IonicModule.forRoot({
       mode: "ios"
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     StatusBar,
