@@ -1,0 +1,40 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  ion-avatar {
+    width: 28px;
+    height: 28px;
+    margin-right: .5rem;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+}
+
+ion-card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px;
+  border-radius: 0;
+
+  // &-content {
+  //   padding: 0;
+  // }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card {
+
+    // &-content {
+    //   padding: 1rem;
+    // }
+
+    &-action {
+
+    }
+  }
+
+}
