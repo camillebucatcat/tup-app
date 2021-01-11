@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'review-information',
     loadChildren: () => import('./pages/registration/review-information/review-information.module').then( m => m.ReviewInformationPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   }
 ];
 
