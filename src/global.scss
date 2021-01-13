@@ -48,13 +48,18 @@ ion-header {
     --border-width: 0!important;
 
     .logo {
-      width: 13rem;
+      width: 11rem;
+      margin-left: .5rem;
     }
   }
 }
 
 ion-content {
   --background: var(--ion-color-light);
+}
+
+.modal-wrapper {
+  color: var(--ion-color-dark);
 }
 
 ion-footer {

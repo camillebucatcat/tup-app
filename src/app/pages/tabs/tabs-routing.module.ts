@@ -54,11 +54,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'profile',
+        path: 'messages',
         children: [
           {
             path: '',
-            loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+            loadChildren: () => import('../messages/messages.module').then(m => m.MessagesPageModule)
           }
         ]
       }
