@@ -1,4 +1,16 @@
 ion-tab-bar {
   box-shadow: 0px 2px 4px rgba(34, 36, 43, 0.1);
   border: none!important;
+
+  ion-icon {
+    font-size: 1.25rem;
+  }
+
+  ion-tab-button {
+    border-bottom: 2px solid transparent;
+    transition: all 500ms ease-in-out;
+    &.tab-selected {
+      border-color: var(--ion-color-primary);
+    }
+  }
 }
