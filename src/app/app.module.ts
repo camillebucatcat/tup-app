@@ -9,6 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { Config } from 'src/services/config';
+import { Helpers } from 'src/services/Helpers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,13 +22,16 @@ import { SharedModule } from './shared.module';
       mode: "ios"
     }),
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Config,
+    Helpers,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
