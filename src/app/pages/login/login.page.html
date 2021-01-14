@@ -2,20 +2,20 @@
   <div class="ion-text-center">
     <img src="./assets/images/site-logo.png" alt="" class="logo">
   </div>
-  <form action="">
+  <form action="" (submit)="login($event)">
     <ion-item class="form-group">
       <ion-label position="stacked">Username</ion-label>
-      <ion-input placeholder="Username"></ion-input>
+      <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="form.username"></ion-input>
     </ion-item>
     <ion-item class="form-group">
       <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input type="password" name="password" placeholder="Password" [(ngModel)]="form.password"></ion-input>
     </ion-item>
     <div class="form-group checkbox-container mt-3">
       <ion-checkbox mode="md"></ion-checkbox>
       <ion-label>Remember me</ion-label>
     </div>
-    <ion-button expand="block" class="mt-4" href="/tabs">Login</ion-button>
+    <ion-button expand="block" class="mt-4" type="button" (click)="login($event)">Login</ion-button>
     <ion-button expand="block" fill="outline" class="mb-4 mt-2" href="/id-number">Register</ion-button>
   </form>
 </ion-content>

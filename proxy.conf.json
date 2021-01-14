@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "http://tup-ais.test",
+        "changeOrigin": true,
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "logLevel": "debug"
+    }
+}

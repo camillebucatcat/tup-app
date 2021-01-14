@@ -4,6 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './structure/header/header.component';
 
+class API {
+    public getUrl() {
+        return ''
+    }
+}
+
 @NgModule({
     declarations: [
         HeaderComponent
@@ -27,7 +33,8 @@ import { HeaderComponent } from './structure/header/header.component';
         CurrencyPipe,
         DecimalPipe,
         DatePipe,
-        HeaderComponent
+        HeaderComponent,
+        API
     ]
 })
-export class SharedModule {}
+export class SharedModule { }
