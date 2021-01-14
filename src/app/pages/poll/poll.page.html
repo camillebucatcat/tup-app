@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>poll</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="page-title ion-padding my-2">Polls</div>
+  <ion-card>
+    <ion-card-content>
+      <div class="card-content">
+        <div class="card-content-header">
+          <div class="title-section">
+            <div class="name">Admin</div>
+            <div class="time">2h</div>
+          </div>
+          <ion-button color="dark" fill="clear" class="btn-more">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </ion-button>
+        </div>
+        <div class="post">
+          <div class="question">What kind of Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo doloremque rerum voluptate quaerat officia alias consequatur?</div>
+          <div class="poll-choices">
+            <div>
+              <div class="progress ion-activatable ripple-parent" data-poll_id="1" data-choice_id="1">
+                <div class="progress-bar" role="progressbar" style="width:10%;" aria-valuenow="0%;" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+                <div class="text">Hotdog</div>
+                <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+              </div>
+              <span>0 votes</span>
+            </div>
+            <div>
+              <div class="progress ion-activatable ripple-parent" data-poll_id="1" data-choice_id="2">
+                <div class="progress-bar" role="progressbar" style="width:100%;" aria-valuenow="100%;" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+                <div class="text">Corned Beed</div>
+                <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+              </div>
+              <span>1 votes</span>
+            </div>
+            <div>
+              <div class="progress ion-activatable ripple-parent" data-poll_id="1" data-choice_id="3">
+                <div class="progress-bar" role="progressbar" style="width:0%;" aria-valuenow="0%;" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+                <div class="text">Manok</div>
+                <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+              </div>
+              <span>0 votes</span>
+            </div>
 
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

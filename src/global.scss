@@ -67,6 +67,13 @@ ion-footer {
   background: var(--ion-color-light);
 }
 
+.page-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+  margin-bottom: .5rem;
+}
+
 .form-title,
 .section-title {
   text-transform: uppercase;
@@ -90,4 +97,101 @@ ion-footer {
 
 ion-card {
   margin: .75rem 0;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+// ION CARD
+
+ion-card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px;
+  border-radius: 0;
+
+  .post {
+    p {
+      font-size: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    a {
+      color: var(--ion-color-tertiary);
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  ion-card-content {
+    padding-bottom: .75rem;
+
+    .card-content-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .75rem;
+
+      .avatar {
+        width: calc(100% - 20px);
+      }
+
+      .btn-more {
+        width: 20px;
+        height: 20px;
+        min-height: 20px;
+        --padding-bottom: 0;
+        --padding-top: 0;
+        --padding-start: 0;
+        --padding-end: 0;
+      }
+    }
+  }
+
+  .post {
+    &-action {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      border-top: 1px solid rgba(var(--ion-color-medium-rgb), .1);
+      padding-top: .5rem;
+
+      ion-button {
+        --border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        min-height: 45px;
+        --padding-bottom: 5px;
+        --padding-top: 5px;
+        --padding-start: 0;
+        --padding-end: 0;
+        margin: 0;
+        width: auto;
+        height: 30px !important;
+        min-height: 30px;
+
+        &.liked {
+
+          ion-icon,
+          span {
+            color: var(--ion-color-primary);
+          }
+        }
+
+        span {
+          margin-left: .35rem;
+          font-size: .9rem;
+        }
+
+        ion-icon,
+        span {
+          color: var(--ion-color-medium);
+        }
+      }
+    }
+  }
+
 }

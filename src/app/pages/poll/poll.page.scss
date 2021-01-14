@@ -1,0 +1,71 @@
+.name {
+  font-weight: 600;
+  font-size: .9rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  font-size: .65rem;
+  opacity: .6;
+}
+
+.question {
+  font-size: 13px;
+}
+
+.poll-choices {
+  margin-top: 1rem;
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    >span {
+      width: 70px;
+      font-size: 12px;
+      font-weight: 500;
+      padding-left: 1rem;
+    }
+
+    .progress {
+      width: calc(100% - 70px);
+      height: 2.5rem;
+      position: relative;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: rgba(var(--ion-color-medium-rgb), .1);
+
+      &:hover {
+
+        .progress-bar {
+          opacity: .3;
+        }
+      }
+
+      &-bar {
+        background-color: rgba(var(--ion-color-primary-rgb), .2);
+        text-align: left;
+        font-weight: 500;
+        font-size: 14px;
+        transition: background-color 250ms ease-in-out;
+        height: 100%;
+      }
+
+      .text {
+        padding-left: .5rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        font-size: 12px;
+        color: #606060;
+        font-weight: 500;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
