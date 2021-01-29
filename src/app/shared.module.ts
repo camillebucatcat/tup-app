@@ -3,6 +3,7 @@ import { CommonModule, CurrencyPipe, DecimalPipe, DatePipe } from '@angular/comm
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './structure/header/header.component';
+import { FeedCommentComponent } from './components/modal/feed-comment/feed-comment.component';
 
 class API {
     public getUrl() {
@@ -12,7 +13,8 @@ class API {
 
 @NgModule({
     declarations: [
-        HeaderComponent
+        HeaderComponent,
+        FeedCommentComponent
     ],
     imports: [
         CommonModule,
@@ -34,7 +36,8 @@ class API {
         DecimalPipe,
         DatePipe,
         HeaderComponent,
-        API
+        API,
+        FeedCommentComponent
     ]
 })
 export class SharedModule { }

@@ -1,37 +1,44 @@
 <ion-content>
-  <ion-card>
+  <ion-card *ngFor="let post of posts">
     <ion-card-content>
       <div class="card-content">
         <div class="card-content-header">
-           <div class="avatar">
-             <ion-avatar>
-               <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-             </ion-avatar>
-             <div>
-               <div class="name">John Doe</div>
-               <div class="time">2h</div>
-             </div>
-           </div>
-           <ion-button color="dark" fill="clear" class="btn-more">
-             <ion-icon name="ellipsis-horizontal"></ion-icon>
-           </ion-button>
+          <div class="avatar">
+            <ion-avatar>
+              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-avatar>
+            <div>
+              <div class="name">{{ post.author.full_name }}</div>
+              <div class="time">{{ post.relative_time }}</div>
+            </div>
+          </div>
+          <ion-button color="dark" fill="clear" class="btn-more">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </ion-button>
         </div>
-       
+
         <div class="post">
-          <p>Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, neque!</p><a>view more</a>
+          <p>{{ post.content }}</p>
+
+          <a *ngIf="post.content.length > 150">view more</a>
+
+          <img [src]="photo.path" *ngFor="let photo of post.photos">
         </div>
       </div>
       <div class="post-action">
-        <ion-button fill="clear" class="liked">
-          <ion-icon name="heart"></ion-icon> <span>2</span>
+        <ion-button fill="clear" [class.liked]="post.liked">
+          <ion-icon name="heart"></ion-icon> <span>{{ post.likes.length }}</span>
         </ion-button>
-        <ion-button fill="clear" (click)="presentComent()">
-          <ion-icon name="chatbubbles-outline"></ion-icon> <span>2</span>
+        <ion-button fill="clear" (click)="presentComment(post)">
+          <ion-icon name="chatbubbles-outline"></ion-icon> <span>{{ post.comments.length }}</span>
         </ion-button>
       </div>
     </ion-card-content>
   </ion-card>
+
+  <div *ngIf="!posts.length && !loading">
+    <h2>No post available.</h2>
+  </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="btn-addpost">
     <ion-fab-button>

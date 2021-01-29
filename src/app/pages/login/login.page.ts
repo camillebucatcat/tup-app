@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
       headers = headers.append('Authorization', 'Bearer ' + token.access_token)
       headers = headers.append('Accept', 'application/json')
 
-      this.http.get(api.user, { headers }).toPromise().then((user: any) => {
+      this.http.get(api.me, { headers }).toPromise().then((user: any) => {
         this.config.set('session', {
           user,
           token

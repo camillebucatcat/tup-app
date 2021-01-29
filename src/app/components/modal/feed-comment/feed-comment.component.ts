@@ -8,11 +8,14 @@ import { ModalController } from '@ionic/angular';
 })
 export class FeedCommentComponent implements OnInit {
 
+  post: any = {}
   constructor(public modalController: ModalController) {
 
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.post.comments)
+  }
 
   dismiss() {
     // using the injected ModalController this page
