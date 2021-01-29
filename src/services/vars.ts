@@ -10,6 +10,7 @@ const api = {
     user: {
         profile: `${BASE_URL}/api/user`,
         feed: `${BASE_URL}/api/feed`,
+        poll: `${BASE_URL}/api/poll`,
     }
 }
 export { api, SESSION_TIMEOUT }
